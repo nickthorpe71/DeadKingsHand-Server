@@ -2,7 +2,7 @@ const server = require('express')();
 const http = require('http').createServer(server);
 const io = require('socket.io')(http);
 
-const players = [];
+let players = [];
 
 io.on('connection', (socket) => {
     console.log('A user connected:', socket.id);
